@@ -1,0 +1,29 @@
+
+
+nav{
+    border: 2px green solid;
+    background-color: blue;
+}
+
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    color:lightgrey; 
+}
+
+ol{
+    list-style: none;
+    display : flex;
+    justify-content: space-around;
+
+}
+
+li:hover{
+    text-decoration: underline;
+    transition: 10s;
+    
+}
