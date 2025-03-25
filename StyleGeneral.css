@@ -1,0 +1,38 @@
+body{
+    background-image: url(./img/Bg1.png);
+    background-size: cover;
+    color: white;
+
+}
+
+
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+
+/*-------------------------------- Style de la nav bar ----------------------------------------*/ 
+
+ol{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+li{
+    list-style: none;
+    
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}

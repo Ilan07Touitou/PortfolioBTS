@@ -1,0 +1,74 @@
+h1, h2{
+    font-size: 35px;
+    color: rgb(251, 151, 10);
+    text-decoration: underline;
+}
+
+h1{    font-size: 50px;}
+
+h4,h5{ 
+    font-size: 20px;
+    margin-top :10px;
+    margin-bottom:20px; 
+}
+p{
+    font-size: 20px;
+}
+
+span{    color: rgb(251, 151, 10);}
+
+.description{
+    background-color: rgba(211, 211, 211, 0.373);
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.Parcours{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+.Parcours_Sco , .Parcours_Pro{
+    background-color: white;
+    color: black;
+    padding: 15px;
+    min-width: 400px;
+}
+
+.Parcours_Sco > h2 , .Parcours_Pro > h2 {
+    text-align: center;
+}
+
+.Parcours_Sco > div  , .Parcours_Pro > div {
+    background-color: lightgrey;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.Parcours_Sco > div:hover  , .Parcours_Pro > div:hover {
+    transform: scale(1.05);
+    box-shadow: 2px 2px 4px rgb(251, 151, 10);
+}
+
+.Parcours_Pro > div:hover .Missions {
+    display: flex;
+}
+
+.Parcours_Pro > div:hover .survol{display: none;}
+
+.Parcours_Sco > div:hover h4 , .Parcours_Pro > div:hover h4 {
+    color: rgb(251, 151, 10);
+    font-weight: bold;
+}
+.Missions{
+    flex-direction: column;
+    display:none; 
+}
+
+.survol{
+    text-align: center;
+    color: grey;
+}
