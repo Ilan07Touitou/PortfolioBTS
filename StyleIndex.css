@@ -54,7 +54,15 @@ body{
     text-align: center;
 }
 
+.link_img{  
 
+    width: 50px;
+}
+
+.Ilan{
+    width: 300px;
+    border-radius: 20px;
+}
 
 
 .Technos {    
