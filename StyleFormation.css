@@ -1,4 +1,11 @@
+body{
 
+    padding: 0px 80px 20px 80px; 
+
+
+}
+
+/* Todo : Faire une animation qui illumine les différents paragraphes un par un*/
 
 .txt{
     background-color: rgba(107, 107, 107, 0.797);

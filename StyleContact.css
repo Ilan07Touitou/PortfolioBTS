@@ -1,0 +1,29 @@
+form{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;   
+    gap: 10px;
+}
+
+form > input , form > textarea {
+    border-radius: 5px;
+    padding: 20px;
+    background-color: lightpink;
+    width: 500px;
+}
+
+label{
+    font-size: larger;
+}
+button{
+
+    padding: 30px;
+    background-color: purple;
+    border-radius: 15px;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+    text-decoration: underline;
+    width: 300px;
+}

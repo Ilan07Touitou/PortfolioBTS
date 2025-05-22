@@ -1,0 +1,122 @@
+h4{
+    font-size: 25px;
+}
+
+
+.les_projets {    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, minmax(250px, auto)); /* Définit une hauteur minimum de 350px */
+    grid-auto-rows: minmax(250px, auto); /* Pour les lignes automatiques */
+    gap: 30px 20px;
+    margin: 10px;
+}
+
+.projet{    
+    margin-top: 100px;
+    background-color: rgba(211, 211, 211, 0.373);
+	border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%; /* Permet aux éléments de prendre toute la hauteur de leur cellule */
+	transition: 0.5s;}
+
+.projet:hover{
+    background-color: lightgray;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 5px yellow, inset 0px 0px 10px 0px yellow;
+
+}
+
+.Le_Projet{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    margin-top: 100px;
+    background-color: rgba(211, 211, 211, 0.373);
+	border-radius: 12px;
+
+    height: 100%; /* Permet aux éléments de prendre toute la hauteur de leur cellule */
+	transition: 0.5s;
+    
+}
+
+.projet > a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: center;
+
+}
+
+.projet > a > img {
+    width: 50%;
+}
+/*? ******************* STYLE DU CARROUSSEL *********************?*/
+
+.caroussel {
+    position: relative;
+    overflow: hidden; 
+    height: 300px;
+    width: 500px;
+}
+
+.caroussel button {
+    position: absolute;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 2.6rem;
+    cursor: pointer;
+    color: white;
+    transform : translateY(-50%);
+    top: 50%;
+    z-index: 2;
+}
+#prev{
+    left: 5px;
+}
+
+#next{
+    right: 5px;
+}
+
+.caroussel ul {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: 100%;
+    width: 100%;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: ease-in-out 0.4s;
+}
+
+
+.slide > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.slide.active{
+    opacity: 1;
+}
+

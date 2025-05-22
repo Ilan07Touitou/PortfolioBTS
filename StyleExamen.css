@@ -1,0 +1,54 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.Les_Diapos {    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, minmax(250px, auto)); /* Définit une hauteur minimum de 350px */
+    grid-auto-rows: minmax(250px, auto); /* Pour les lignes automatiques */
+    gap: 30px 20px;
+}
+
+.Diapo_Parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Diapo{    
+    margin-top: 100px;
+    background-color: rgba(211, 211, 211, 0.373);
+	border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%; /* Permet aux éléments de prendre toute la hauteur de leur cellule */
+	transition: 0.5s;
+    padding: 10px;
+}
+
+.Diapo:hover{
+    background-color: lightgray;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 5px yellow, inset 0px 0px 10px 0px yellow;
+}
+
+.FicheSynthese{
+    height: 100vh;
+    width: 100%;
+    zoom: normal;
+}
+
+
+.img_acc{
+    height: 300px;
+    width: 500px;
+}
