@@ -1,0 +1,60 @@
+.card{
+    width: 500px;
+    height: 350px;
+    perspective: 1000px;
+}
+
+.card:hover{
+    z-index: 10;
+}
+
+.content-card{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.3s ease-out;
+}
+
+.content-card img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    filter: grayscale(80%); /* 👈 Ajout du filtre */
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap; /* 👈 Permet le retour à la ligne automatique */
+    padding: 20px; /* Optionnel : évite que ça colle aux bords */
+
+
+}
+
+.glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: overlay;
+    filter: brightness(1) contrast(1.2) saturate(1.5);
+    background-image: url('./img/Certifications/Texture/Indieground_Holographic_Textures_05.jpg');
+    background-size: 200%;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    transition: all 0.3s ease-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+@keyframes shineMove {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
+}
+
+.glow {
+    animation: shineMove 10s linear infinite;
+}
