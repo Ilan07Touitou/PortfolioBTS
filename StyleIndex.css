@@ -116,5 +116,61 @@ body{
 .img_techno{
     width: 50%;
 }
-/*-------------------------------- Style de la nav bar ----------------------------------------*/ 
 
+/*? ****************** Les Avis *******************/
+.Avis {
+    background-color: green;
+    margin-top: 15vh;
+    padding: 40px 10px 10px; /* espace pour le titre */
+    position: relative;
+    height: 50vh; /* tu peux ajuster la hauteur */
+}
+
+.Avis h1 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    margin: 0;
+}
+
+.ProfContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 20px;
+}
+
+.Prof {
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid red;
+    max-width: 25%;
+    color: white;
+    height: 70%;
+}
+
+.Desc_prof{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.Desc_prof h4 {
+    font-style: bold;
+    width: fit-content;
+}
+
+.Prof img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.Prof p i {
+    font-size: 20px;
+}
