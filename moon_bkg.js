@@ -1,4 +1,4 @@
-import * as THREE from "/PortfolioBTS/node_modules/three/build/three.module.js";
+import * as THREE from "/PortfolioBTS/libs/three/build/three.module.js";
 
 // ==============================
 // 📦 Initialisation de la scène
