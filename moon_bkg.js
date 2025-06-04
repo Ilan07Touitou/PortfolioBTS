@@ -23,7 +23,7 @@ scene.background = starTexture;
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
 // Position de la caméra (on recule pour voir la Lune)
-camera.position.z = 5;
+camera.position.z = 10;
 
 // ==============================
 // 🔧 Chargement des textures Lune
@@ -44,16 +44,16 @@ const moonBump = textureLoader.load("./img/Texture/moon_bump.jpg");
 // 		arg1 = Rayon
 // 		arg2 = Segments horizontaux (+ = plus lisse)
 const moonGeometry = new THREE.SphereGeometry(
-  2.5, // Rayon
-  64, // Segments horizontaux (plus = plus lisse)
-  64 // Segments verticaux
+	5, // Rayon
+	64, // Segments horizontaux (plus = plus lisse)
+	64 // Segments verticaux
 );
 
 // Matériau avec texture + bumpMap pour le relief
 const moonMaterial = new THREE.MeshStandardMaterial({
-  map: moonTexture, // Texture diffuse (visuelle)
-  bumpMap: moonBump, // Relief
-  bumpScale: 0.1, // Intensité du relief (à ajuster selon ton goût)
+	map: moonTexture, // Texture diffuse (visuelle)
+	bumpMap: moonBump, // Relief
+	bumpScale: 0.1, // Intensité du relief (à ajuster selon ton goût)
 });
 
 // Création du mesh (forme + matière)
@@ -80,6 +80,7 @@ scene.add(ambientLight);
 // ==============================
 
 const renderer = new THREE.WebGLRenderer({ alpha: true });
+renderer.setPixelRatio( window.devicePixelRatio );
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
@@ -88,23 +89,28 @@ document.body.appendChild(renderer.domElement);
 // ==============================
 
 function animate() {
-  requestAnimationFrame(animate);
+	requestAnimationFrame(animate);
 
-  // Rotation continue de la lune
-  moon.rotation.y += 0.002;
+	// Rotation continue de la lune
+	moon.rotation.y += 0.002;
 
-  // Rendu de la scène avec la caméra
-  renderer.render(scene, camera);
+	// Rendu de la scène avec la caméra
+	renderer.render(scene, camera);
 }
-
-animate();
 
 // ==============================
 // 📱 Gestion du redimensionnement de la fenêtre
 // ==============================
 
 window.addEventListener("resize", () => {
-  camera.aspect = window.innerWidth / window.innerHeight;
-  camera.updateProjectionMatrix();
-  renderer.setSize(window.innerWidth, window.innerHeight);
+	camera.aspect = window.innerWidth / window.innerHeight;
+	camera.updateProjectionMatrix();
+	renderer.setSize(window.innerWidth, window.innerHeight);
 });
+
+window.addEventListener('scroll', () => {
+
+})
+
+
+animate();
