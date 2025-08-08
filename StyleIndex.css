@@ -2,14 +2,17 @@ body{
     background-image: url(./img/Bg1.png);
     background-size: cover;
     color: white;
-
+   
 }
 
-.Container{
-    display : flex; 
-    align-items: flex-end;
-    gap: 10px;
-    justify-content: space-between;
+
+.Container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap; /* permet de passer à la ligne si nécessaire */
 }
 
 .Intro{
@@ -85,41 +88,58 @@ body{
 /*-------------------------------- Style de la grid ----------------------------------------*/ 
 
 
-.Technos {    
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(3, minmax(250px, auto)); /* Définit une hauteur minimum de 350px */
-    grid-auto-rows: minmax(250px, auto); /* Pour les lignes automatiques */
-    gap: 30px 20px;
-    margin: 10px;
+.Technos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  max-width: 900px; /* limite la largeur totale */
+  margin: 0 auto; /* centre toute la grille */
+  gap: 3rem;
+  padding: 2rem;
+  justify-items: center;
 }
 
-.LaTechno{    
-    margin-top: 100px;
-    background-color: rgba(211, 211, 211, 0.373);
-	border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 100%; /* Permet aux éléments de prendre toute la hauteur de leur cellule */
-	transition: 0.5s;}
+.LaTechno {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+  max-width: 150px;
 
-.LaTechno:hover{
-    background-color: rgba(251, 151, 10, 0.678);
-    transform: scale(1.1);
-    box-shadow: 0px 0px 5px yellow, inset 0px 0px 10px 0px yellow;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.img_techno{
-    width: 50%;
+.img_techno {
+  width: 40px;
+  height: auto;
+  margin-bottom: 0.5rem;
+  display: block;
 }
+
+.LaTechno label {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.9rem;
+  text-align: center;
+  color: white;
+}
+
+
+.LaTechno:hover {
+  background-color: rgba(251, 151, 10, 0.9);
+  transform: scale(1.05);
+  box-shadow: 0 0 8px yellow;
+}
+
 
 /*? ****************** Les Avis *******************/
 .Avis {
-    background-color: green;
+    background-color: rgba(211, 211, 211, 0.373);
+    border-radius: 5px;
     margin-top: 15vh;
     padding: 40px 10px 10px; /* espace pour le titre */
     position: relative;
@@ -131,6 +151,7 @@ body{
     top: 10px;
     left: 10px;
     margin: 0;
+    font-size: 30px;
 }
 
 .ProfContainer {
@@ -142,14 +163,13 @@ body{
 }
 
 .Prof {
-    background-color: blue;
+    background-color: rgba(163, 96, 1, 0.904);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     gap: 10px;
     padding: 10px;
-    border: 1px solid red;
     max-width: 25%;
     color: white;
     height: 70%;
@@ -173,4 +193,106 @@ body{
 
 .Prof p i {
     font-size: 20px;
+}
+
+@media (max-width: 768px) {
+/*? ****************** L'Intro Responsive *******************/
+  .Container {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .Intro,
+  .Carte {
+    max-width: 100%;
+    width: 100%;
+    padding: 1.5rem;
+    box-sizing: border-box;
+  }
+
+  .Intro h3 {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .Intro p,
+  .Carte p {
+    font-size: 1rem;
+    text-align: justify;
+  }
+
+  .Carte img.Ilan {
+    width: 70%;
+    max-width: 200px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .Carte .link_img img {
+    width: 32px;
+  }
+
+  .Carte .link_img {
+    margin: 0 5px;
+  }
+/*? ****************** Les Technos Responsive *******************/
+   
+  .Technos {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1rem;
+    gap: 3rem;
+    justify-items: center;
+  }
+
+  .img_techno {
+    width: 30px;
+  }
+
+/*? ****************** Les Avis Responsive *******************/
+.Avis {
+    height: auto; /* Laisse la section s'adapter au contenu */
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+  }
+
+  .Avis h1 {
+    position: static;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .ProfContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .Prof {
+    max-width: 90%;
+    height: auto;
+    padding: 1rem;
+    font-size: 0.95rem;
+    gap: 0.8rem;
+  }
+
+  .Prof p i {
+    font-size: 1rem;
+    text-align: justify;
+  }
+
+  .Desc_prof {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .Desc_prof h4 {
+    font-size: 0.95rem;
+  }
+
+  .Prof img {
+    width: 80px;
+  }
 }

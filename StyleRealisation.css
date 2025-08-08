@@ -39,10 +39,11 @@ h4{
     
     margin-top: 100px;
     background-color: rgba(211, 211, 211, 0.373);
-	border-radius: 12px;
+	  border-radius: 12px;
 
     height: 100%; /* Permet aux éléments de prendre toute la hauteur de leur cellule */
-	transition: 0.5s;
+	  transition: 0.5s;
+    padding: 20px;
     
 }
 
@@ -120,3 +121,107 @@ h4{
     opacity: 1;
 }
 
+@media (max-width: 1024px) {
+  .les_projets {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .projet {
+    margin-top: 60px;
+    padding: 10px;
+  }
+
+  .projet > a > img {
+    width: 60%;
+  }
+
+  h4 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .les_projets {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .projet {
+    margin-top: 40px;
+    padding: 8px;
+  }
+
+  .projet > a > img {
+    width: 80%;
+  }
+
+  h4 {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+}
+
+/* === Responsive pour tablette et mobile === */
+@media (max-width: 1024px) {
+  .Le_Projet {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  .caroussel {
+    width: 90%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .caroussel img {
+    object-fit: contain;
+  }
+
+  .btn {
+    font-size: 2rem;
+  }
+
+  .Le_Projet h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .Le_Projet label {
+    font-size: 1.2rem;
+  }
+
+  .Le_Projet p {
+    font-size: 1rem;
+    text-align: justify;
+  }
+}
+
+@media (max-width: 600px) {
+  .Le_Projet {
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .caroussel {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .btn {
+    font-size: 1.8rem;
+  }
+
+  .Le_Projet h2 {
+    font-size: 1.2rem;
+    padding: 8px;
+  }
+
+  .Le_Projet p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+}

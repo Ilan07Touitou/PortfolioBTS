@@ -3,24 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snake IA </title>
+    <title>Site de E-Commerce </title>
     <link rel="stylesheet" href="StyleGeneral.css">
     <link rel="stylesheet" href="StyleRealisation.css">
 
 </head>
 <body>
     
-    <!--<?php require_once(header.html) ?> -->
-
-    <nav> <!--A supprimer-->
-        <ol>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="Formation.html">Formation</a></li> 
-            <li><a href="Profil.html">Profil</a></li>
-            <li><a href="Realisation.html">Réalisations</a></li>
-            <li><a href="Examen.html">Épreuves</a></li>
-            <li><a href="Certification.html">Certifications</a></li>
-            <li><a href="Contact.html">Contact</a></li>
+    <nav class="navbar">
+        <div class="nav-header">
+            <button class="nav-toggle" id="burger-button" aria-label="Menu">&#9776;</button>
+        </div>
+        <ol class="nav-links" id="nav-links">
+            <li><a href="index.html" class="ripple-link">Accueil</a></li>
+            <li><a href="Formation.html" class="ripple-link">Formation</a></li>
+            <li><a href="Profil.html" class="ripple-link">Profil</a></li>
+            <li><a href="Realisation.html" class="ripple-link">Réalisations</a></li>
+            <li><a href="Examen.html" class="ripple-link">Épreuves</a></li>
+            <li><a href="Certification.html" class="ripple-link">Certifications</a></li>
+            <li><a href="Contact.html" class="ripple-link">Contact</a></li>
         </ol>
     </nav>
 
@@ -45,15 +46,16 @@
 
 
             <br> <br><br>
-            <label> Description : </label>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse purus felis, interdum vel metus sit amet, aliquam tincidunt ex. In luctus sapien ut odio pharetra, semper volutpat mauris rhoncus. In mattis aliquet leo, non sodales nibh posuere in. Quisque vitae enim id risus convallis lobortis. Aliquam et tortor in lacus lacinia rhoncus. Sed sagittis viverra lorem, sit amet auctor nisi pulvinar quis. Proin id varius urna, sit amet suscipit risus. Mauris sollicitudin, nisi sit amet tristique pellentesque, dolor neque dictum lectus, in aliquet neque purus non quam. Nunc sed pulvinar mi. Vestibulum suscipit in nisl nec ornare. Integer odio velit, feugiat et nisi nec, scelerisque laoreet ante.
-
-                Nunc eu magna lectus. Cras ullamcorper, erat quis dapibus ullamcorper, eros odio rhoncus purus, nec ullamcorper nisi mi non velit. Sed porttitor a dolor at vehicula. Aliquam hendrerit non felis eu interdum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam quis pharetra elit, non feugiat turpis. Proin maximus nibh non congue tristique. Mauris feugiat risus nibh. Aliquam erat volutpat. Nulla rutrum est ut sapien tempor convallis sed nec arcu. Ut tincidunt aliquam turpis, vel imperdiet metus sagittis ullamcorper.</p>
-        </div>
+            <label> 🛒 Site e-commerce Full Stack – Produits animaliers </label>
+            <p>Développement d’un site e-commerce complet en PHP, HTML, CSS, JS et Bootstrap, avec base de données dédiée. Fonctionnalités : gestion complète des produits (CRUD), création de comptes client/admin, panier, validation légale des commandes, suivi des ventes, système de réductions, et espace personnel sécurisé. Projet full stack mettant en œuvre des logiques métier complexes et une architecture sécurisée.
+            </p>
+            </div>
 
 
     <script src="moon_bkg.js" type="module"></script>
     <script src="caroussel.js"></script>
+    <script src="Burger_Menu.js"></script>
+    <script src="Ripple_Effect.js"></script>
 
 </body>
 </html>

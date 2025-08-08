@@ -10,17 +10,18 @@
 </head>
 <body>
     
-    <!--<?php require_once(header.html) ?> -->
-
-    <nav> <!--A supprimer-->
-        <ol>
-            <li><a href="index.html">Accueuil</a></li>
-            <li><a href="Formation.html">Formation</a></li> 
-            <li><a href="Profil.html">Profil</a></li>
-            <li><a href="Realisation.html">Réalisations</a></li>
-            <li><a href="Examen.html">Épreuves</a></li>
-            <li><a href="Certification.html">Certifications</a></li>
-            <li><a href="Contact.html">Contact</a></li>
+    <nav class="navbar">
+        <div class="nav-header">
+            <button class="nav-toggle" id="burger-button" aria-label="Menu">&#9776;</button>
+        </div>
+        <ol class="nav-links" id="nav-links">
+            <li><a href="index.html" class="ripple-link">Accueil</a></li>
+            <li><a href="Formation.html" class="ripple-link">Formation</a></li>
+            <li><a href="Profil.html" class="ripple-link">Profil</a></li>
+            <li><a href="Realisation.html" class="ripple-link">Réalisations</a></li>
+            <li><a href="Examen.html" class="ripple-link">Épreuves</a></li>
+            <li><a href="Certification.html" class="ripple-link">Certifications</a></li>
+            <li><a href="Contact.html" class="ripple-link">Contact</a></li>
         </ol>
     </nav>
 
@@ -37,13 +38,15 @@
 
                 <textarea placeholder="Votre message" name="message"></textarea>
         
-            <button type="submit">Envoyer</button>
+            <button class="btn_submit" type="submit">Envoyer</button>
         </form>
     </div>
     
 
     <!-- Mettre un lien pour rediriger vers Linkedin-->
     <script src="moon_bkg.js" type="module"></script>
+    <script src="Burger_Menu.js"></script>
+    <script src="Ripple_Effect.js"></script>
 
 </body>
 </html>

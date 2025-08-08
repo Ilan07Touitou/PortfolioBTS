@@ -92,3 +92,69 @@ span{    color: rgb(251, 151, 10);}
 .Missions > ul > li{
     list-style:disc;
 }
+
+@media (max-width: 768px) {
+  /* Réduction des tailles de titres */
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  h4, h5 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  /* Description */
+  .description {
+    flex-direction: column;
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  .Ilan {
+    float: none;
+    display: block;
+    margin: 0 auto 1rem auto;
+    height: 200px;
+    width: auto;
+  }
+
+  .Intro {
+    text-align: left;
+  }
+
+  /* Section Parcours */
+  .Parcours {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .Parcours_Sco, .Parcours_Pro {
+    width: 100%;
+    min-width: auto;
+    padding: 1rem;
+  }
+
+  .Parcours_Sco > div, .Parcours_Pro > div {
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+  }
+
+  .Missions ul {
+    padding-left: 1.2rem;
+  }
+
+  .survol {
+    font-size: 0.9rem;
+  }
+}

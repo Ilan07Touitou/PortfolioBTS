@@ -52,3 +52,68 @@ body{
     height: 300px;
     width: 500px;
 }
+
+/* === Responsive Diapos pour tablette === */
+@media (max-width: 1024px) {
+  .Les_Diapos {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 10px;
+  }
+
+  .img_acc {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border-radius: 8px;
+  }
+
+  .FicheSynthese {
+    height: 80vh;
+    width: 100%;
+  }
+
+  .Diapo {
+    margin-top: 50px;
+    padding: 15px;
+  }
+
+  .Diapo h4 {
+    font-size: 1rem;
+  }
+
+  .scan {
+    font-size: 0.9rem;
+  }
+}
+
+/* === Responsive Diapos pour mobile === */
+@media (max-width: 600px) {
+  .Les_Diapos {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .Diapo {
+    margin-top: 30px;
+    padding: 10px;
+  }
+
+  .img_acc {
+    width: 100%;
+    height: auto;
+  }
+
+  .FicheSynthese {
+    height: 60vh;
+  }
+
+  .Diapo h4 {
+    font-size: 0.95rem;
+    padding: 5px;
+  }
+
+  .scan {
+    font-size: 0.8rem;
+    padding: 5px;
+  }
+}

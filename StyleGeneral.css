@@ -1,3 +1,10 @@
+.ripple-link::after {
+  left: var(--ripple-x, 50%);
+  top: var(--ripple-y, 50%);
+  width: var(--ripple-size, 100px);
+  height: var(--ripple-size, 100px);
+}
+
 body{
     color: white;
     margin: 0px 40px 0px 40px; 
@@ -70,3 +77,112 @@ canvas {
     height: 100%;
     z-index: -1; /* place le canvas derrière le contenu */
   }
+
+  /* ---- Barre de navigation ---- */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 1rem 2rem;
+  position: relative;
+  z-index: 100;
+}
+
+/* Conteneur logo + bouton */
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Bouton burger */
+.nav-toggle {
+  font-size: 2rem;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: none; /* caché par défaut */
+}
+
+/* Menu desktop */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  margin: 1rem 0 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: rgb(251, 151, 10);
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  max-height: 100%;
+  z-index: -1;
+  pointer-events: none; /* ✅ pas d’interaction avec la 3D */
+}
+
+/* ✅ Responsive Mobile */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block; 
+    position: fixed; /* ✅ Change de absolute à fixed */
+    top: 10px;
+    left: 10px;
+    z-index: 9999; /* ✅ Par-dessus tout */
+    background-color: transparent; /* au cas où */
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed; /* ✅ Pour qu'il suive le bouton */
+    top: 60px; /* juste sous le bouton */
+    left: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    z-index: 9998; /* juste sous le bouton */
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
+.ripple-link {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple-link::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px; /* petite taille au départ */
+  height: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 1;
+  transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.ripple-link.ripple-effect::after {
+  transform: translate(-50%, -50%) scale(12); /* grandit sans déborder */
+  opacity: 0;
+}

@@ -11,17 +11,18 @@
 </head>
 <body>
 
-    <!--<?php require_once(header.html) ?> -->
-
-    <nav> <!--A supprimer-->
-        <ol>
-            <li><a href="index.html">Accueuil</a></li>
-            <li><a href="Formation.html">Formation</a></li> 
-            <li><a href="Profil.html">Profil</a></li>
-            <li><a href="Realisation.html">Réalisations</a></li>
-            <li><a href="Examen.html">Épreuves</a></li>
-            <li><a href="Certification.html">Certifications</a></li>
-            <li><a href="Contact.html">Contact</a></li>
+    <nav class="navbar">
+        <div class="nav-header">
+            <button class="nav-toggle" id="burger-button" aria-label="Menu">&#9776;</button>
+        </div>
+        <ol class="nav-links" id="nav-links">
+            <li><a href="index.html" class="ripple-link">Accueil</a></li>
+            <li><a href="Formation.html" class="ripple-link">Formation</a></li>
+            <li><a href="Profil.html" class="ripple-link">Profil</a></li>
+            <li><a href="Realisation.html" class="ripple-link">Réalisations</a></li>
+            <li><a href="Examen.html" class="ripple-link">Épreuves</a></li>
+            <li><a href="Certification.html" class="ripple-link">Certifications</a></li>
+            <li><a href="Contact.html" class="ripple-link">Contact</a></li>
         </ol>
     </nav>
     
@@ -29,18 +30,26 @@
     <div class="description">
         <img  class="Ilan" src="./img/Ilan.jpg" alt="Photo D'Ilan TOUITOU">
 
-        <h1>Bonjour, je m'appelle Ilan Touitou</h1>
+        <h1>Qui suis-je ?</h1>
     <!-- Petit paragraphe expliquant qui je suis, mes motivations...-->
         <div class="Intro">
-            <p>L’informatique est plus qu’une passion pour moi : c’est un <span class="bold">terrain d’innovation et de défis constants</span>. Curieux et rigoureux, j’aime explorer de nouvelles solutions pour répondre à des problématiques complexes, qu’il s’agisse de développement logiciel, d’intelligence artificielle ou d’optimisation de systèmes. Mon approche repose sur une réflexion analytique et une recherche constante d’efficacité, tout en accordant une grande importance à l’expérience utilisateur.</p>
-    
-            <p>Lors d’un stage en tant que DSI adjoint chez <span class="underline italic">Astridsen</span>, une entreprise de conseil en plein essor, j’ai conçu et développé intégralement la <span class="bold">nouvelle version du site vitrine</span>, de la refonte de la maquette à son implémentation technique, sous la supervision de plusieurs Directeurs Généraux. Ce projet a permis d’améliorer la <span class="bold">visibilité</span> et l’<span class="bold">image numérique</span> de l’entreprise, accompagnant ainsi sa croissance.</p>
-            <p>J’ai également participé à <span class="underline italic">"La Nuit de l’Info"</span>, un événement collaboratif où j’ai développé une application de sensibilisation en un temps limité. Ces expériences m’ont appris à travailler sous pression, à collaborer efficacement en équipe et à structurer mes solutions de manière optimale.</p>
+            <p>
+                Passionné d’informatique, je vois chaque projet comme un défi à relever. Curieux et rigoureux, j’aime concevoir des solutions efficaces et innovantes, en plaçant l’utilisateur au cœur de mes priorités.
+            </p>
 
-            <p>Je maîtrise plusieurs technologies, dont <span class="bold">C#, .NET, Java, Python, JavaScript et PHP</span>, et j’ai à cœur de créer des solutions performantes, innovantes et adaptées aux enjeux du numérique.</p>
-        
+            <p>
+                Lors de mon stage chez <strong class="underline italic">Astridsen</strong>, j’ai développé intégralement la nouvelle version du site vitrine de l’entreprise, de la maquette au déploiement. Ce projet a renforcé ma maîtrise du développement web et de la gestion de projet.
+            </p>
+
+            <p>
+                J’ai aussi participé à <em>La Nuit de l’Info</em>, où j’ai conçu une application en équipe, dans un temps limité. Cette expérience m’a appris à collaborer sous pression et à structurer rapidement mes idées.
+            </p>
+
+            <p>
+                Je travaille aujourd’hui avec des langages comme <strong>C#, .NET, Java, Python, JavaScript</strong> et <strong>PHP</strong>, dans le but de créer des solutions fiables et adaptées aux enjeux du numérique.
+            </p>
+
         </div>
-        
     
     
     
@@ -116,9 +125,28 @@
                     </ul>
                 </div>
             </div>
+
+            <div class="NuitInfo">
+                <h4>Nuit de L'Informatique</h4>
+                <label>2022</label>
+
+                <p class="survol"> &#9207; Survoler pour en savoir plus &#9207; </p>
+                
+                <div class="Missions">
+                    <h5><span class="underline" style="color:black;">Principales missions :</span></h5>
+                    <ul>
+                        <li><label>Développement et conception en équipe d'une <span class="bold" style="color:black;">Application Web</span> interactive</label></li>
+                        <li><label>Mise en place d'outils interactifs tels qu'un <span class="bold" style="color:black;">Bot Discord</span></label></li>
+                        <li><label>Revues de projets et mise en place de <span class="bold" style="color:black;">tests unitaires</span></label></li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
     </div>
 
     <script src="moon_bkg.js" type="module"></script>
+    <script src="Burger_Menu.js"></script>
+    <script src="Ripple_Effect.js"></script>
 </body>
 </html>

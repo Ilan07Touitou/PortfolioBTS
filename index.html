@@ -6,20 +6,24 @@
     <title>Portfolio - TOUITOU Ilan</title>
     <link rel="stylesheet" href="StyleIndex.css">
     <link rel="stylesheet" href="StyleGeneral.css">
+    <link rel="icon" href="MoonIcon6.png" type="image/x-icon">
     
 </head>
 <body>
     <!--require_once(header.html)-->
 
-    <nav> <!--A supprimer-->
-        <ol>
-            <li><a href="index.html">Accueuil</a></li> <!-- Présentation avec mes liens qui renvoient vers d'autres pages -->
-            <li><a href="Formation.html">Formation</a></li> <!-- Qu'est-ce que le BTS SIO  -->
-            <li><a href="Profil.html">Profil</a></li> <!-- Qui suis-je et Mon Parcours -->
-            <li><a href="Realisation.html">Réalisations</a></li> <!-- Mes projets (avec pleins d'autres projets) -->
-            <li><a href="Examen.html">Épreuves</a></li> <!-- E4 - Diapo des stages et Veille Techno -->
-            <li><a href="Certification.html">Certifications</a></li> <!-- Toutes les certifications passées  -->
-            <li><a href="Contact.html">Contact</a></li> <!-- Un formulaire de contact vers mon mail via Formspree -->
+    <nav class="navbar">
+        <div class="nav-header">
+            <button class="nav-toggle" id="burger-button" aria-label="Menu">&#9776;</button>
+        </div>
+        <ol class="nav-links" id="nav-links">
+            <li><a href="index.html" class="ripple-link">Accueil</a></li>
+            <li><a href="Formation.html" class="ripple-link">Formation</a></li>
+            <li><a href="Profil.html" class="ripple-link">Profil</a></li>
+            <li><a href="Realisation.html" class="ripple-link">Réalisations</a></li>
+            <li><a href="Examen.html" class="ripple-link">Épreuves</a></li>
+            <li><a href="Certification.html" class="ripple-link">Certifications</a></li>
+            <li><a href="Contact.html" class="ripple-link">Contact</a></li>
         </ol>
     </nav>
 
@@ -42,7 +46,6 @@
                 <p>Je m'appelle Ilan, développeur Junior et étudiant à Aurlom Paris en deuxième année de BTS SIO option SLAM spécialisée en développement. </p>
                 <div>
                     <a href="linkedin.com/in/ilan-touitou-6734182a6" class="link_img"><img src="./img/Linkedin.png" alt="Logo Linkedin" class="link_img"></a>
-                    <a href="#" class="link_img"><img src="./img/Github.png" alt="GitHub" class="link_img"></a>
                     <a href="#" class="link_img"><img src="./img/Mail.png" alt="E-Mail" class="link_img"></a>
                 </div>
                 
@@ -132,6 +135,11 @@
         window.currentPlanet = "earth"; // ou "mars", "jupiter", etc.
     </script>
     <script type="module" src="moon_bkg.js"></script>
+
+
+    <script src="Burger_Menu.js"></script>
+    <script src="Ripple_Effect.js"></script>
+    
 
 </body>
 </html>

@@ -22,8 +22,6 @@ scene.background = starTexture;
 /* PerspectiveCamera(FOV, Ratio hauteur/largeur, Plan proche, Plan lointain) */
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
-// Position de la caméra (on recule pour voir la Lune)
-camera.position.z = 10;
 
 // ==============================
 // 🔧 Chargement des textures Lune
@@ -39,14 +37,17 @@ const moonBump = textureLoader.load("./img/Texture/moon_bump.jpg");
 // 🌕 Création de la sphère Lune
 // ==============================
 
+
+const moonRadius = window.innerWidth < 768 ? 2.5 : 5; // 📱 plus petit rayon sur mobile
+
 // Géométrie de la Lune : sphère
 // Sphere Geometry
 // 		arg1 = Rayon
 // 		arg2 = Segments horizontaux (+ = plus lisse)
 const moonGeometry = new THREE.SphereGeometry(
-	5, // Rayon
-	64, // Segments horizontaux (plus = plus lisse)
-	64 // Segments verticaux
+	moonRadius,
+	64,
+	64
 );
 
 // Matériau avec texture + bumpMap pour le relief
@@ -94,6 +95,10 @@ function animate() {
 	// Rotation continue de la lune
 	moon.rotation.y += 0.002;
 
+	// 🪄 Effet de profondeur au scroll
+	const scrollY = window.scrollY || window.pageYOffset;
+	camera.position.z = 10 + scrollY * 0.005; // Plus tu scrolles, plus on recule
+
 	// Rendu de la scène avec la caméra
 	renderer.render(scene, camera);
 }
@@ -106,6 +111,8 @@ window.addEventListener("resize", () => {
 	camera.aspect = window.innerWidth / window.innerHeight;
 	camera.updateProjectionMatrix();
 	renderer.setSize(window.innerWidth, window.innerHeight);
+	renderer.setPixelRatio(window.devicePixelRatio); 
+
 });
 
 window.addEventListener('scroll', () => {

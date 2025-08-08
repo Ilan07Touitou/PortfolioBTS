@@ -5,7 +5,11 @@ body {
     background-color: #08090f;
     color: #fafafa;
     line-height: 1.5;
+    
 }
+
+
+
 
 /* 2. Conteneur centré */
 form {
@@ -23,7 +27,7 @@ form {
     backdrop-filter: blur(4px);
     max-width: 800px;
     margin: 4rem auto;
-    padding:  1rem;
+    padding:  7rem;
     border-radius: 5px;
 }
 
@@ -75,7 +79,7 @@ textarea {
 }
 
 /* 8. Bouton envoyé */
-button {
+.btn_submit {
     grid-column: 1 / -1;
     justify-self: start;
     background: none;
@@ -88,7 +92,7 @@ button {
     transition: background .2s, color .2s;
 }
 
-button:hover {
+.btn_submit:hover {
     background: #ffc600;
     color: #08090f;
 }
@@ -101,7 +105,7 @@ button:hover {
     h2 {
         font-size: 2.5rem;
     }
-    button {
+    .btn_submit {
         justify-self: center;
         width: 100%;
     }
